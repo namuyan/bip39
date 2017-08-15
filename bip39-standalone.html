@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head lang="en">
         <meta charset="utf-8" />
@@ -22147,6 +22147,83 @@ bitcoinjs.bitcoin.networks.crown = {
   pubKeyHash: 0x00,
   scriptHash: 0x05,
   wif: 0x80,
+};
+
+bitcoinjs.bitcoin.networks.monacoin = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x32,
+    scriptHash: 0x37,
+    wif: 0xb2,
+};
+
+bitcoinjs.bitcoin.networks.kumacoin = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x2d,
+    scriptHash: 0x08,
+    wif: 0xad,
+};
+
+bitcoinjs.bitcoin.networks.bitzeny = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x51,
+    scriptHash: 0x05,
+    wif: 0xd1,
+};
+
+bitcoinjs.bitcoin.networks.fujicoin = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x24,
+    scriptHash: 0x10,
+    wif: 0xa4,
+};
+
+bitcoinjs.bitcoin.networks.ringo = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x3c,
+    scriptHash: 0x55,
+    wif: 0xbc,
+};
+
+bitcoinjs.bitcoin.networks.sayacoin = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x3f,
+    scriptHash: 0x05,
+    wif: 0xbf,
+};
+
+bitcoinjs.bitcoin.networks.sha1coin = {
+    messagePrefix: "unused",
+    bip32: {
+        public: 0x019da462,
+        private: 0x019d9cfe
+    },
+    pubKeyHash: 0x3f,
+    scriptHash: 0x05,
+    wif: 0xbf,
 };
 
 bitcoinjs.bitcoin.networks.dash = {
@@ -47243,6 +47320,62 @@ window.Entropy = new (function() {
             bip49available: true,
             onSelect: function() {
                 network = bitcoinjs.bitcoin.networks.bitcoin;
+                setHdCoin(0);
+            },
+        },
+        {
+            name: "MONA - Monacoin",
+            bip49available: true,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.monacoin;
+                setHdCoin(22);
+            },
+        },
+        {
+            name: "KUMA - Kumacoin",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.kumacoin;
+                setHdCoin(0);
+            },
+        },
+        {
+            name: "ZENY - Bitzeny",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.bitzeny;
+                setHdCoin(123);
+            },
+        },
+        {
+            name: "FJC - Fujicoin",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.fujicoin;
+                setHdCoin(75);
+            },
+        },
+        {
+            name: "RIN - Ringo",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.ringo;
+                setHdCoin(0);
+            },
+        },
+        {
+            name: "SAYA - Sayacoin",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.sayacoin;
+                setHdCoin(0);
+            },
+        },
+        {
+            name: "SHA1 - SHA1coin",
+            bip49available: false,
+            onSelect: function () {
+                network = bitcoinjs.bitcoin.networks.sha1coin;
                 setHdCoin(0);
             },
         },
